@@ -1,7 +1,6 @@
 package com.example.myapplicationspisokpokpok.domain
 
-import android.os.Parcel
-import android.os.Parcelable
+import androidx.lifecycle.LiveData
 
 interface ShopListRepository {
 
@@ -9,5 +8,5 @@ interface ShopListRepository {
     fun deleteShopItem(shopItem: ShopItem)
     fun editShopItem(shopItem: ShopItem)
     fun getshopItem(shopItemId: Int): ShopItem
-    fun getshoplist(): List<ShopItem>
+    fun getshoplist(): LiveData<List<ShopItem>>
 }
